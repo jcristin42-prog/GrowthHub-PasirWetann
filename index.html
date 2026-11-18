@@ -370,7 +370,7 @@ textarea:focus-visible {
       <a class="nav-link" href="#cashbook" data-route="cashbook"><span class="nav-icon">▧</span><span class="nav-text">Smart Cashbook</span></a>
       <a class="nav-link" href="#hpp" data-route="hpp"><span class="nav-icon">∑</span><span class="nav-text">Kalkulator HPP</span></a>
       <a class="nav-link" href="#katalog" data-route="katalog"><span class="nav-icon">▦</span><span class="nav-text">Katalog Produk</span></a>
-      <a class="nav-link" href="#roadmap" data-route="roadmap"><span class="nav-icon">↗</span><span class="nav-text">Roadmap & Target</span></a>
+    
     </nav>
     <div class="sidebar-spacer"></div>
     <div class="pilot-card"><span class="pilot-tag"><i class="pilot-dot"></i> PROTOTYPE PILOT</span><b>Pasir Wetan, Banyumas</b><p>Ruang pendampingan untuk membantu UMKM makanan mengenali kebutuhan dan langkah pengembangan usaha.</p></div>
@@ -409,7 +409,9 @@ textarea:focus-visible {
           <div class="card problem-card"><span class="problem-number">AREA 03</span><h3>Pengelolaan usaha</h3><p>Pencatatan kas dan perhitungan HPP belum rutin.</p></div>
           <div class="card problem-card"><span class="problem-number">AREA 04</span><h3>Transfer pengetahuan</h3><p>Praktik yang berhasil belum terdokumentasi untuk dipelajari bersama.</p></div>
         </div>
-        <div class="note">Konteks program: keripik jamur telah menembus pasar nasional dan menjadi benchmark pembelajaran. Angka sekitar 20 UMKM merupakan cakupan komunitas binaan, bukan jumlah pengguna aktif aplikasi.</div>
+        <div class="note">
+          
+        </div>
       </section>
 
       <!-- ASESMEN -->
@@ -442,7 +444,7 @@ textarea:focus-visible {
           <aside class="assistant-aside">
             <div class="card"><div class="card-head"><div><h3>Topik yang bisa ditanyakan</h3><p>Gunakan kata kunci sederhana.</p></div><span class="icon-box">💬</span></div><ul class="aside-list"><li>📦 <span><b>Kemasan & label</b><br>berat bersih, komposisi, kontak</span></li><li>✨ <span><b>Branding</b><br>nama, logo, identitas produk</span></li><li>📣 <span><b>Pemasaran</b><br>konten, Instagram, WhatsApp</span></li><li>🧾 <span><b>Keuangan</b><br>pencatatan, HPP, harga jual</span></li></ul></div>
             <div class="card"><h3>Prioritas asesmenmu</h3><p id="assistant-priority">Belum ada hasil asesmen. Isi asesmen kesiapan agar rekomendasi dapat dikaitkan dengan kondisimu.</p><button type="button" class="btn light small" data-go="asesmen" style="margin-top:13px">Buka asesmen →</button></div>
-            <div class="card"><h3>Batasan jawaban</h3><p>Asisten tidak menentukan legalitas, masa kedaluwarsa, klaim gizi, harga vendor, atau hasil uji produk. Verifikasi hal tersebut kepada pihak dan sumber resmi.</p></div>
+            <div class="card"><h3>Batasan jawaban</h3><p>Asisten tidak menentukan legalitas, masa kedaluwarsa, klaim gizi, harga vendor, atau hasil uji produk.</p></div>
           </aside>
         </div>
       </section>
@@ -456,7 +458,7 @@ textarea:focus-visible {
         </div>
         <div class="grid grid-2" style="margin-top:17px">
           <div class="card"><h3>Pertanyaan saat meminta penawaran pemasok</h3><ul class="aside-list"><li>• <span>Berapa minimum order quantity (MOQ)?</span></li><li>• <span>Apakah tersedia opsi jumlah kecil untuk uji pasar?</span></li><li>• <span>Apa spesifikasi bahan dan ukuran kemasannya?</span></li><li>• <span>Berapa harga, biaya desain/cetak, dan estimasi pengerjaan?</span></li><li>• <span>Apakah tersedia sampel sebelum pemesanan?</span></li></ul></div>
-          <div class="card"><h3>Catatan penting</h3><p>Checklist ini merupakan alat persiapan, bukan penetapan standar kepatuhan. Kebutuhan label, izin edar, sertifikasi halal, dan ketentuan lain perlu diperiksa sesuai jenis produk melalui instansi berwenang.</p><div class="note">Jangan mencantumkan klaim masa simpan, gizi, atau keamanan produk tanpa dasar pengujian yang sesuai.</div></div>
+          <div class="card"><h3>Catatan penting</h3><p>Checklist ini merupakan alat persiapan, bukan penetapan standar kepatuhan. Kebutuhan label, izin edar, sertifikasi halal, dan ketentuan lain perlu diperiksa sesuai jenis produk melalui instansi berwenang.</p><div class="note"></div></div>
         </div>
       </section>
 
@@ -481,7 +483,7 @@ textarea:focus-visible {
           <div class="card"><div class="card-head"><div><h2>Input biaya produksi</h2><p>Masukkan total biaya untuk satu batch produksi.</p></div><span class="tag">Input simulasi</span></div><div class="form-grid"><div class="field"><label for="hpp-material">Bahan baku (Rp)</label><input id="hpp-material" type="number" min="0" value="150000"></div><div class="field"><label for="hpp-labor">Tenaga kerja (Rp)</label><input id="hpp-labor" type="number" min="0" value="50000"></div><div class="field"><label for="hpp-pack">Kemasan (Rp)</label><input id="hpp-pack" type="number" min="0" value="40000"></div><div class="field"><label for="hpp-other">Biaya lain (Rp)</label><input id="hpp-other" type="number" min="0" value="20000"></div><div class="field"><label for="hpp-units">Jumlah bungkus</label><input id="hpp-units" type="number" min="1" value="60"></div><div class="field"><label for="hpp-margin">Target laba / markup (%)</label><input id="hpp-margin" type="number" min="0" value="30"></div></div><button class="btn light small" id="reset-hpp" type="button">Kembalikan contoh awal</button></div>
           <div class="calc-result"><small>HARGA JUAL INDIKATIF PER BUNGKUS</small><strong id="hpp-price">Rp5.700</strong><div class="calc-stat"><span>Total biaya produksi</span><b id="hpp-total">Rp260.000</b></div><div class="calc-stat"><span>HPP per bungkus</span><b id="hpp-unit">Rp4.334</b></div><div class="calc-stat"><span>Markup target</span><b id="hpp-markup">30%</b></div><div class="calc-stat"><span>Estimasi laba per bungkus</span><b id="hpp-profit">Rp1.366</b></div><p style="font-size:10px;color:#c4d9c8;margin:14px 0 0">Harga dibulatkan ke atas ke kelipatan Rp100.</p></div>
         </div>
-        <div class="formula"><b>Rumus simulasi</b><br>HPP per bungkus = total biaya produksi ÷ jumlah bungkus.<br>Harga indikatif = HPP × (1 + markup).<br><br>Catatan: markup 30% berarti tambahan 30% dari HPP, bukan margin 30% dari harga jual. Pastikan komponen biaya dan kapasitas produksi sudah lengkap sebelum menetapkan harga.</div>
+        <div class="formula"><b>Rumus simulasi</b><br>HPP per bungkus = total biaya produksi ÷ jumlah bungkus.<br>Harga indikatif = HPP × (1 + markup).<br><br>Catatan: </div>
       </section>
 
       <!-- KATALOG -->
@@ -490,7 +492,7 @@ textarea:focus-visible {
         <div class="section-banner"><strong>Prototype katalog:</strong> produk yang kamu tambahkan hanya muncul di sesi browser ini dan tidak otomatis dipublikasikan ke internet atau tersimpan sebagai database.</div>
         <div class="grid grid-2" style="align-items:start;margin-bottom:18px">
           <div class="card"><div class="card-head"><div><h2>Tambah produk</h2><p>Isi informasi dasar yang ingin ditampilkan.</p></div><span class="icon-box">＋</span></div><form id="product-form"><div class="field"><label for="product-name">Nama produk</label><input id="product-name" maxlength="50" placeholder="Nama produk" required></div><div class="field"><label for="product-description">Deskripsi singkat</label><textarea id="product-description" maxlength="140" placeholder="Ceritakan keunggulan atau karakter produk" required></textarea></div><div class="form-grid"><div class="field"><label for="product-price">Harga (Rp)</label><input id="product-price" type="number" min="1" placeholder="Contoh: 15000" required></div><div class="field"><label for="product-wa">Nomor WhatsApp</label><input id="product-wa" type="tel" placeholder="Contoh: 62812xxxx"></div></div><button class="btn" type="submit">Tambahkan ke katalog</button></form></div>
-          <div class="card"><h2>Tips menyiapkan katalog</h2><ul class="aside-list"><li>📷 <span>Gunakan foto produk yang jelas dan representatif.</span></li><li>✍️ <span>Tulis deskripsi singkat dan informasi yang benar.</span></li><li>🏷️ <span>Pastikan harga dan ukuran/berat produk diperbarui.</span></li><li>📲 <span>Periksa nomor WhatsApp dan respons pemesanan.</span></li></ul><div class="note">Pastikan semua informasi dan foto produk telah mendapat persetujuan pemilik usaha sebelum dipublikasikan.</div></div>
+          <div class="card"><h2>Tips menyiapkan katalog</h2><ul class="aside-list"><li>📷 <span>Gunakan foto produk yang jelas dan representatif.</span></li><li>✍️ <span>Tulis deskripsi singkat dan informasi yang benar.</span></li><li>🏷️ <span>Pastikan harga dan ukuran/berat produk diperbarui.</span></li><li>📲 <span>Periksa nomor WhatsApp dan respons pemesanan.</span></li></ul><div class="note"></div></div>
         </div>
         <div class="section-row"><div><h2>Produk yang ditambahkan</h2><p id="catalog-count">0 produk pada sesi ini.</p></div><button class="btn light small" id="clear-products" type="button">Kosongkan katalog</button></div>
         <div class="catalog-grid" id="catalog-grid"><div class="product-empty">Belum ada produk yang ditambahkan.<br>Isi formulir di atas untuk membuat kartu katalog pertama.</div></div>
