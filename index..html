@@ -41,6 +41,318 @@
 @media(max-width:800px){.sidebar{width:76px;padding:18px 10px}.brand{justify-content:center;padding:0 0 22px}.brand-copy,.nav-label,.nav-link .nav-text,.pilot-card,.side-foot{display:none}.nav-link{justify-content:center;padding:12px 5px}.nav-icon{font-size:18px}.main{margin-left:76px}.topbar{height:64px;padding:0 20px}.content{padding:25px 20px 45px}.hero{grid-template-columns:1fr;padding:27px}.hero-art{display:none}.assistant-layout{grid-template-columns:1fr}.assistant-aside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.assistant-aside .card{margin:0}.timeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.sidebar{position:sticky;top:0;inset:auto;width:100%;height:auto;padding:9px 12px;display:block;overflow:auto;white-space:nowrap}.brand{display:none}.nav-label{display:none}.nav-list{display:flex;gap:5px}.nav-link{display:inline-flex;width:auto;padding:9px 11px;border-radius:10px;gap:7px}.nav-link .nav-text{display:inline;font-size:11px}.nav-icon{font-size:14px;width:auto}.sidebar-spacer,.pilot-card,.side-foot{display:none}.main{margin:0}.topbar{height:55px;padding:0 16px}.content{padding:22px 14px 36px}.page-heading h1{font-size:26px}.hero{padding:24px 21px;min-height:0;border-radius:19px}.hero h2{font-size:27px}.hero p{font-size:12px}.hero-actions .btn{font-size:11px;padding:10px 12px}.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.metric{padding:14px}.section-row{margin-top:23px}.question{grid-template-columns:1fr;gap:7px}.assistant-aside{grid-template-columns:1fr}.chat-stream{height:330px;padding:14px}.message{max-width:94%}.form-grid{grid-template-columns:1fr}.catalog-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.footer{padding:18px 15px;display:grid}.prototype-pill{font-size:9px}.avatar{width:30px;height:30px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* ==========================================
+   PASIR WETAN GROWTH HUB
+   VISUAL ENHANCEMENT PACK
+   ========================================== */
+
+/* 1. BACKGROUND LEBIH HIDUP */
+body {
+  background-image:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(220, 235, 221, 0.55),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 5% 85%,
+      rgba(230, 182, 107, 0.10),
+      transparent 25%
+    );
+}
+
+/* 2. ANIMASI SAAT SECTION DIBUKA */
+@keyframes sectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page.active .page-heading {
+  animation: sectionReveal 0.55s ease both;
+}
+
+.page.active .grid > * {
+  animation: sectionReveal 0.6s ease both;
+}
+
+.page.active .grid > :nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.page.active .grid > :nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.page.active .grid > :nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+.page.active .grid > :nth-child(4) {
+  animation-delay: 0.26s;
+}
+
+/* 3. KARTU FLOATING / HOVER EFFECT */
+.card,
+.timeline-card,
+.question-group,
+.shortcut {
+  transition:
+    transform 0.35s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+@media (hover: hover) {
+  .card:hover,
+  .timeline-card:hover,
+  .question-group:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 18px 38px rgba(23, 62, 45, 0.11),
+      0 3px 9px rgba(23, 62, 45, 0.04);
+    border-color: #b9d0bd;
+  }
+
+  .shortcut:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 16px 30px rgba(23, 62, 45, 0.10);
+  }
+}
+
+/* 4. ICON LEBIH INTERAKTIF */
+.icon-box,
+.metric-icon {
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.card:hover .icon-box,
+.shortcut:hover .icon-box {
+  transform: rotate(-6deg) scale(1.08);
+  background: #dcebdd;
+}
+
+/* 5. JAMUR DI HERO BERGERAK */
+@keyframes mushroomFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-13px) rotate(2deg);
+  }
+}
+
+.mushroom-orb {
+  animation: mushroomFloat 5s ease-in-out infinite;
+}
+
+/* 6. FLOATING INFORMATION CARDS */
+@keyframes floatingCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+.float-note.one {
+  animation: floatingCard 5s ease-in-out infinite;
+}
+
+.float-note.two {
+  animation: floatingCard 6s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+/* 7. HERO GRADIENT BERGERAK HALUS */
+.hero {
+  background-size: 180% 180%;
+  animation: heroGradient 12s ease infinite;
+}
+
+@keyframes heroGradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* 8. TOMBOL DENGAN EFEK KILAU */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 55%;
+  height: 200%;
+  background: rgba(255,255,255,0.20);
+  transform: rotate(25deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(23, 62, 45, 0.18);
+    filter: brightness(1.06);
+  }
+
+  .btn:hover::after {
+    left: 150%;
+  }
+}
+
+/* 9. STATISTIC CARDS */
+.metric {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+@media (hover: hover) {
+  .metric:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(23, 62, 45, 0.09);
+  }
+}
+
+.metric strong,
+.target-number {
+  transition: color 0.3s ease;
+}
+
+.metric:hover strong {
+  color: var(--forest-3);
+}
+
+/* 10. NAVIGATION ACTIVE EFFECT */
+.nav-link {
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.nav-link.active {
+  box-shadow:
+    inset 3px 0 var(--gold),
+    0 5px 15px rgba(0,0,0,0.08);
+}
+
+@media (hover: hover) {
+  .nav-link:hover {
+    transform: translateX(3px);
+  }
+}
+
+/* 11. CHAT ASSISTANT */
+.bot-avatar {
+  animation: botPulse 3s ease-in-out infinite;
+}
+
+@keyframes botPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(46, 118, 81, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(46, 118, 81, 0.08);
+  }
+}
+
+.message {
+  animation: sectionReveal 0.3s ease both;
+}
+
+/* 12. INPUT FORM LEBIH MODERN */
+.field input,
+.field select,
+.field textarea,
+.chat-input-row input {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.chat-input-row input:focus {
+  border-color: #6f9e78;
+  box-shadow: 0 0 0 4px rgba(46, 118, 81, 0.09);
+}
+
+/* 13. ROADMAP TIMELINE */
+.timeline-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+@media (hover: hover) {
+  .timeline-card:hover {
+    background: #f6faf4;
+  }
+
+  .timeline-card:hover::before {
+    background: var(--gold);
+    transform: scale(1.08);
+  }
+}
+
+.timeline-card::before {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* 14. FOCUS ACCESSIBILITY */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(46, 118, 81, 0.45);
+  outline-offset: 3px;
+}
+
+/* 15. REDUCE MOTION UNTUK AKSESIBILITAS */
+@media (prefers-reduced-motion: reduce) {
+  .page.active .page-heading,
+  .page.active .grid > *,
+  .mushroom-orb,
+  .float-note,
+  .hero,
+  .bot-avatar,
+  .message {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 </style>
 </head>
 <body>
